@@ -94,7 +94,7 @@ const processUpload = async (file) => {
   formData.append('file', file)
 
   try {
-    await axios.post('http://localhost:3000/api/files/upload', formData)
+    await axios.post('https://trasferserver.onrender.com/api/files/upload', formData)
     showStatus('success', 'File uploaded successfully!')
     emit('uploaded')
   } catch (err) {

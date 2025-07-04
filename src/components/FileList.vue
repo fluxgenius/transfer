@@ -92,7 +92,7 @@ const getFileExtension = (filename) => {
 const deleteFile = async (id) => {
   if (!confirm('Are you sure you want to delete this file?')) return;
   try {
-    await axios.delete(`http://localhost:3000/api/files/${id}`);
+    await axios.delete(`https://trasferserver.onrender.com/api/files/${id}`);
     emit('deleted');
   } catch (err) {
     alert('Failed to delete file. Please try again.');

@@ -174,7 +174,7 @@ const transfers = ref([])
 const manualId  = ref('')
 
 const fetchFiles = async () => {
-  const { data } = await axios.get('http://localhost:3000/api/files')
+  const { data } = await axios.get('https://trasferserver.onrender.com/api/files')
   files.value = data.files
 }
 

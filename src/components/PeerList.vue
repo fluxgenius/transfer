@@ -93,7 +93,7 @@ const handleSendFile = async (peerId, event) => {
 
   try {
     // 1️⃣ upload to backend
-    const res = await axios.post('http://localhost:3000/api/files/upload', formData)
+    const res = await axios.post('https://trasferserver.onrender.com/api/files/upload', formData)
     const fileData = res.data.file
 
     // 2️⃣ emit real metadata for socket transfer
